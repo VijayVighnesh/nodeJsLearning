@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Blogs</title>
+</head>
+<body>
+    <h1>All Blog Posts</h1>
+    <a href="/add-blog">Add New Blog</a> | <a href="/">Home</a>
+    <hr>
+    
+    <% blogs.forEach(blog => { %>
+        <div style="margin-bottom: 20px; padding: 10px; border: 1px solid #ccc;">
+            <h3><%= blog.title %></h3>
+            <p><%= blog.content %></p>
+            <small>Posted: <%= blog.createdAt.toDateString() %></small>
+        </div>
+    <% }) %>
+    
+    <% if (blogs.length === 0) { %>
+        <p>No blogs yet. <a href="/add-blog">Add the first one!</a></p>
+    <% } %>
+</body>
+</html>

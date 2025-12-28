@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Add Blog</title>
+</head>
+<body>
+    <h1>Add New Blog Post</h1>
+    
+    <form action="/blogs" method="POST">
+        <div>
+            <label>Title:</label><br>
+            <input type="text" name="title" required style="width: 300px; padding: 5px;">
+        </div>
+        <br>
+        <div>
+            <label>Content:</label><br>
+            <textarea name="content" required rows="10" cols="50" style="padding: 5px;"></textarea>
+        </div>
+        <br>
+        <button type="submit" style="padding: 10px 20px;">Add Blog</button>
+    </form>
+    
+    <br>
+    <a href="/blogs">View All Blogs</a> | <a href="/">Home</a>
+</body>
+</html>
